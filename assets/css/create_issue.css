@@ -1,0 +1,87 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+#create-new-issue{
+    border: 8px solid rgb(48, 11, 212);
+    height: 520px;
+    width: 500px;
+    background-color: rgb(202, 174, 202);
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 0px 5px 5px 5px rgb(200, 33, 200); 
+}
+
+#create-new-issue form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between  ;
+}
+
+#create-new-issue form div{
+    margin-top: 15px;
+}
+
+#create-new-issue input,textarea{
+    width: 400px;
+    font-size: 20px;
+    margin: 5px;
+    padding: 5px 10px;
+    outline: none;
+   
+}
+
+#create-new-issue textarea{
+    font-size: 15px;
+}
+
+#add-issue-btn{
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    background-color: rgb(29, 153, 29);
+}
+
+
+#lable-list #tag-name{
+    height: 20px;
+    width: 50px;
+    background-color: rgb(78, 105, 23);
+    color: white;
+    font-weight: bold;
+    padding: 5px 8px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+#lable-list .tag{
+    height: 20px;
+    background-color: rgb(86, 23, 105);
+    color: white;
+    font-weight: bold;
+    padding: 2px 4px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+
+#lable-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#lable-container #add-lable-btn{
+    margin-top: 10px;
+    padding: 2px 4px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 20px;
+   
+}

@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#project-header{    
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px; 
+    margin: 10px;
+}
+
+#add-issue-btn{
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    color:white;
+    letter-spacing: 1px;
+    background-color:darkblue;
+
+}
+
+#sorting-section{
+    width: 80%;
+    height: 130px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    background-color: rgb(206, 189, 189);
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+
+#project-name-issue{
+    background-color: wheat;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px 5px white;
+
+}
+
+/* style fot dropdown filters */
+
+.dropbtn {
+    background-color: darkblue;
+    color: white;
+    margin: 5px;
+    width: 190px;
+    height:40px;
+   
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    /* position: absolute; */
+    background-color: #f9f9f9;
+    /* min-width: 160px; */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    /* max-height: 120px; */
+    /* overflow: auto;    */
+  }
+  
+  .dropdown-content .element {
+    width: 170px;
+    color: black;
+    padding: 2px 5px;
+    font-size: 18px;
+    margin: 5px;
+  }
+  
+  .dropdown-content .element:hover{
+    background-color: yellowgreen;
+  }
+
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #39676d;
+  }
+
+ #filter-btn{
+     margin: 10px;
+ }
+
+ #filter-btn button{
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    background-color: rgb(255, 255, 255);
+ }
+
+/* styling serach by title input */
+
+#search-by-title-description{
+    margin: 0;
+}
+
+#search-by-title-description label{
+    background-color: darkblue;
+    color: white;
+    font-size: 22px;
+    border: none;
+    width: 300px;
+    height:40px;
+    text-align: center;
+    padding: 0;
+    padding-top: 2px;
+}
+
+#search-by-title-description input{
+    margin-top: 10px;
+    width: 300px;
+    display: block;
+    font-size: 20px;
+    background-color: white;
+    padding: 2px 4px;
+    outline: none;
+
+}
+
+#search-by-title-description button{
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 100px;
+}
+
+/* all issue section */
+
+#all-issues{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    border: 8px solid  rgb(204, 230, 154);
+    margin-left: 230px;
+    margin-top: 40px;
+    box-shadow: 0px 0px 5px 5px white;
+    background-color: rgb(204, 230, 154);
+}
+
+
+
+.issue-container{
+    margin: 20px;
+    border: 8px solid rgb(245, 238, 245);
+    height: 160px;
+    width: 90%;
+    padding: 5px 10px;
+    box-shadow: 0px 4px 7px 0px #3b542a;
+    background-color: rgb(255, 255, 255);
+}
+
+#issue-name{
+    font-size: 20px;
+    padding: 0;
+    margin: 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#auther-name{
+    margin: 0;
+    margin: 5px;
+}
+
+#description{
+  padding: 5px;
+}
+
+#description h5{
+    margin: 3px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#description-content{
+    font-size: 15px;
+    margin: 0px;
+    padding: 1px 2px;
+}
+
+#tags-container{
+    display: flex;
+    margin-top: 10px;
+}
+
+#tags-container #tag-name{
+    height: 20px;
+    width: 50px;
+    background-color: rgb(78, 105, 23);
+    color: white;
+    font-weight: bold;
+    padding: 2px 4px;
+    margin: 5px;
+}
+
+#tags-container .tag{
+    height: 20px;
+    background-color: rgb(86, 23, 105);
+    color: white;
+    font-weight: bold;
+    padding: 2px 4px;
+    margin: 5px;
+    text-align: center;
+}
+
+#issue-no{
+    display: flex;
+    align-items: center;
+}
+
+#total-issues{
+    position: relative;
+    left: -50%;
+    background-color: red;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    
+}
+
+
+
+
+
+#delete-issue{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: 94%;
+    top: -25%;
+}
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}

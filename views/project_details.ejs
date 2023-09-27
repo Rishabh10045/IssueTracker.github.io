@@ -1,0 +1,101 @@
+
+<link rel= "stylesheet" href="/css/project.css">
+
+<header id="project-header">
+    <h3 id="project-name-issue">Project Name : <%=project.projectName%></h3>    
+    <!-- <form style="margin: 0; padding: 0;" action="/project/create_issue_page/<%= project._id%>" method="get">
+        <button id="add-issue-btn">ADD ISSUE</button>
+    </form> -->
+    <a href ="/project/create_issue_page/<%= project.id%>">
+        <button id="add-issue-btn">ADD ISSUE</button>
+    </a>
+   
+</header>
+
+<div id="sorting-section">
+    <div id ="Search section only">
+        <div id="search-by-title-description">
+            <form action="">
+                <label for="search"></label>
+                <input type="text" name="search" id="search-by-title-input" placeholder="Search by Title or Description">
+                <button id="search-button">Search</button>
+            </form>
+        </div>
+    </div>
+    <div id ="LabelSectionOnly">
+        <div id="filter-by-lable">
+            <div class="dropdown">            
+                <button class="dropbtn">Lable</button>
+                <div class="dropdown-content">
+                    <%for(issue of project.issues){%>
+                    <% for(lable of issue.lable){%>
+                    <div class="element">
+                        <input class="lable-check-input" type="checkbox" value="<%=issue.id%>"id="lable">
+                        <label class="form-check-label" for="lable1"><%= lable%></label>  
+                    </div>
+                    <%}%><%}%> 
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "AuthorSectiononly">
+        <div id="filter-by-author">
+            <div class="dropdown">
+                <button class="dropbtn">Author</button>
+                <div class="dropdown-content">
+                    
+                    <%for(issue of project.issues){%>
+                    <div class="element">
+                        <input class="author-check-input" type="checkbox" value="<%= issue._id%>"id="author">
+                        <label class="form-check-label" for="author"><%= issue.issueAuthor%></label>
+                    </div>
+                    <%}%> 
+                
+            </div>
+            </div> 
+        </div>
+        
+    </div>    
+    <div id="filter-btn">
+        <button id="filter-button">Filter  </button>
+    </div>
+
+</div>
+
+<div id="all-issues">
+    <div id="issue-no">
+        <div id="total-issues">Issues : <%=project.issues.length%></div>
+        <h1>All Issues</h1>
+        
+    </div>
+    
+    
+    <input type="hidden" id="projectId" value="<%=project._id%>">
+    <%for(issue of project.issues){%>
+        <div class="issue-container">
+            <p id="issue-name"><span>Issue name : <%= issue.issueName %></span></p>
+            <p id="auther-name">Author :  <span><%= issue.issueAuthor %></span></p> 
+            
+            <div id="description">
+                <h5>Description</h5>
+                <p id="description-content">
+                    <%= issue.issueDescription %>
+                </p>
+            </div>
+            <div id="tags-container">
+                <div id="tag-name">Tags :</div>
+                
+            <% for(lable of issue.lable){%>
+                 <div class="tag">  <%=lable %></div>
+               <% } %> 
+            </div>
+            <!-- <a href="/project/delete_issue/<%=issue%>"><img id ="delete-issue" src="/images/delete.jpg"></a> -->
+            
+        </div>
+    <%}%> 
+</div>
+
+<script src="/js/filter.js"></script>
+  
+ 
